@@ -1,5 +1,6 @@
 # Scalable Backend Service Design (50k bikes and 500k users)
-
+## architecture diagram
+```
 [Mobile App]
     |
  [API Gateway + Auth]
@@ -19,7 +20,7 @@
                          [Device State Service]
                                |
                         [Timeseries/Telemetry DB]
-
+```
 ## Component Boundaries
 
 - **Ride Service**
