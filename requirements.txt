@@ -1,0 +1,10 @@
+# Pinned for Python 3.7 compatibility
+fastapi==0.95.2
+uvicorn==0.22.0
+pydantic==1.10.13
+SQLAlchemy==1.4.54
+
+# tests
+pytest==7.4.4
+requests==2.31.0
+httpx==0.24.1
