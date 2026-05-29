@@ -10,30 +10,30 @@ Cursor
 
 Please generate a complete, production-ready project with a full file structure and source code according to the following requirements:
 
-(1) Assignment Overview
+(1) Assignment Overview<br/>
 Build a simple Bike Ride Service API that supports starting a ride, ending a ride, retrieving ride information, and calculating ride cost. Your solution should be clean, runnable, and easy to review. You should use Python (FastAPI preferred) and SQLite.
 
-(2) Required API endpoints
-1> Method: “POST” Endpoint: “/ride/start” Purpose: "Create a new ride session"
-2> Method: “POST” Endpoint: “/ride/end” Purpose: "End an existing ride session"
-3> Method: “GET” Endpoint: “/ride/{id}” Purpose: "Return ride details"
+(2) Required API endpoints<br/>
+1> Method: “POST” Endpoint: “/ride/start” Purpose: "Create a new ride session"<br/>
+2> Method: “POST” Endpoint: “/ride/end” Purpose: "End an existing ride session"<br/>
+3> Method: “GET” Endpoint: “/ride/{id}” Purpose: "Return ride details"<br/>
 4> Method: “GET” Endpoint: “/ride/{id}/cost” Purpose: "Return calculated fare for the ride"
 
-(3) Pricing Rules
-1> Unlock fee: HKD 5 
-2> First 15 minutes: free 
-3> After 15 minutes: HKD 1 per 5 minutes 
+(3) Pricing Rules<br/>
+1> Unlock fee: HKD 5<br/>
+2> First 15 minutes: free<br/> 
+3> After 15 minutes: HKD 1 per 5 minutes<br/> 
 4> Daily cap: HKD 25
 
-(4) Technical Expectations 
-1> Organize the project with clear structure and readable naming.
-2> Accurate pricing logic, clear component boundaries, reasonable trade-offs, and edge-case awareness.
+(4) Technical Expectations<br/> 
+1> Organize the project with clear structure and readable naming.<br/>
+2> Accurate pricing logic, clear component boundaries, reasonable trade-offs, and edge-case awareness.<br/>
 3> Use SQLite as database.  
-4> Include sensible validation and error handling. 
-5> Provide a README with setup and run instructions. 
-6> Unit tests 
-7> Basic idempotency or duplicate request handling 
-8> Caching or other performance-aware choices 
+4> Include sensible validation and error handling.<br/> 
+5> Provide a README with setup and run instructions.<br/> 
+6> Unit tests<br/> 
+7> Basic idempotency or duplicate request handling<br/> 
+8> Caching or other performance-aware choices<br/> 
 9> Simple concurrency handling where relevant
 
 - **Prompt 2**
@@ -55,8 +55,8 @@ Please explain the pros and cons of each, and describe how to implement idempote
 
 - **Prompt 6**
 
-Refactor the code to ensure data integrity and idempotency:
-(1) Add a unique constraint in the database to prevent multiple active rides for the same user or bike.
+Refactor the code to ensure data integrity and idempotency:<br/>
+(1) Add a unique constraint in the database to prevent multiple active rides for the same user or bike.<br/>
 (2) Re-enable the Idempotency-Key as a required field in the headers for the "/ride/start" and "/ride/end" APIs.
 
 ## 3. AI Mistakes, Weaknesses, and Blind Spots
